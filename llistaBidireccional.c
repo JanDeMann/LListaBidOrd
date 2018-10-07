@@ -65,7 +65,7 @@ void LLISTABID_insereix(llistaBID *l, int e) {
         }
 
     }
-    
+
     Node *aux;
 
     aux = (Node *) malloc(sizeof(Node));

@@ -28,6 +28,7 @@ typedef struct{
 llistaBID LLISTABID_crea();
 //void LLISTABID_insereixdevant ( llistaBID *l, int e );
 //void LLISTABID_insereixdarrere ( llistaBID *l, int e );
+void LLISTABID_insereix(llistaBID *l, int e);
 int LLISTABID_consulta ( llistaBID l );
 void LLISTABID_avanca ( llistaBID *l );
 void LLISTABID_retrocedeix ( llistaBID *l );
