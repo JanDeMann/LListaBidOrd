@@ -10,7 +10,6 @@ llistaBID LLISTABID_crea(){
     llistaBID l;
 
     l.cap = (Node*)malloc(sizeof(Node));
-
     if(l.cap == NULL){
 
         printf("Error malloc!\n");
@@ -45,6 +44,50 @@ llistaBID LLISTABID_crea(){
 }
 
 
+void LLISTABID_insereix(llistaBID *l, int e) {
+
+    int control = 0;
+
+    while (control == 0) {
+
+        if (l->pdi->e > e) {
+
+            control = 1;
+
+        } else if (l->pdi == l->ult) {
+
+            control = 1;
+
+        } else {
+
+            LLISTABID_avanca(l);
+
+        }
+
+    }
+    
+    Node *aux;
+
+    aux = (Node *) malloc(sizeof(Node));
+
+    if (aux == NULL) {
+
+        printf("Error de malloc\n");
+
+    } else {
+
+        aux->e = e;
+        aux->seg = l->pdi;
+        aux->ant = l->pdi->ant;
+        l->pdi->ant->seg = aux;
+        l->pdi->ant = aux;
+
+    }
+
+}
+
+
+/*
 void LLISTABID_insereixdevant(llistaBID *l, int e){
     Node *aux;
 
@@ -114,7 +157,7 @@ void LLISTABID_insereixdarrere(llistaBID *l, int e){
 
 }
 
-
+*/
 
 
 int LLISTABID_consulta(llistaBID l){
