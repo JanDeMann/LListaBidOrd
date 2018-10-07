@@ -231,7 +231,7 @@ void LLISTABID_retrocedeix(llistaBID *l){
 
     else{
 
-        l -> pdi == l -> pdi -> ant;
+        l -> pdi = l -> pdi -> ant;
 
     }
 
