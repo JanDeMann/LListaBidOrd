@@ -48,6 +48,8 @@ void LLISTABID_insereix(llistaBID *l, int e) {
 
     int control = 0;
 
+    LLISTABID_vesInici(l);
+
     while (control == 0) {
 
         if (l->pdi->e > e) {
